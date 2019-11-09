@@ -1,0 +1,34 @@
+Lab 3 Program Description
+
+Nicholas Alderman - 16NAA5
+Daniyal Maniar - 16MDM13
+
+Overall, the program is trying to share a common memoryspace to send information between
+ processes. The producer sends information to the common memory space, and sets a flag that
+  there is information in the buffer. The consumer receives the flag, and reads the 
+  information from the shared memory space and outputs it. The sychronization algorithm used
+   in this lab was a Mutex test and set algorithm. Below is a description of each file and 
+   the functions inside of them.
+
+ common.c:
+ 	When any of the processes uses a shared memory space it needs to set a mutex and when 
+ 	its complete with using the shared memory space it releases the mutex.
+ 	getMutex:
+ 		Uses test and set key and loops through until key is available. Once, it is
+ 		set waiting to false
+ 	releaseMutex:
+ 		Finds next pid and loops through all processes. Then passes the key
+ 		to the next process in the queue
+
+ consumer.c:
+ 	Initializes mutex and variables to check buffer status. Attains critical section after 
+ 	calling getMutex. Checks counter for buffer and updates currCharacter. It iterates 
+ 	through all the characters in buffer. Then checks if there is no more producers and 
+ 	releases mutex.
+
+ producer.c:
+ 	Initializes variables for checking mutex status. Loops through file and adds characters
+ 	to the buffer if there is space. As the buffer is cleared the producer adds all 
+ 	characters in the file until all characters are put through the buffer. After the 
+ 	producer is done with the text file it decrements number of producers in critical 
+ 	section.

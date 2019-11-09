@@ -1,0 +1,33 @@
+Lab 2 Pseudo Code & Description
+Nicholas Alderman - 16NAA5
+Daniyal Maniar - 16MDM13
+
+
+define constants: nr_threads, nr_running
+
+my_read_proc(...):
+    numChars = 0
+    Format output using a buffer location
+    if first output:
+        print table headers into buffer, put thread and processes running info
+        update numChars
+            print proc information
+            update numChars
+         Move to next task
+    else:
+        if (lastTask == firstTask):
+        	mark end of file and end process
+        	update numChars
+        if there are remaining tasks:
+            print task info to buffer
+            update numChars
+        move to next task
+    mark end of file
+    return numChars
+
+init_module():
+	create proc_entry
+	attach my_Read_Proc to proc_entry
+
+cleanup_module():
+	remove proc_entry when called

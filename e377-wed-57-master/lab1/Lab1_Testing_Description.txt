@@ -1,0 +1,11 @@
+Nicholas Alderman - 16NAA5
+Daniyal Maniar - 16MDM13
+
+TESTING DESCRIPTION
+In addition to regular debugging and testing techniques,
+we used three methods to determine the accuracy and precision of the
+program. Firstly, we simply checked the folder and manually looked at the process information from that.
+Secondly, we used the 'top' command which is a built in Linux command that produces a table of processes. 
+Finally we also used the 'ps -A' command to look at the list of processes. After cross checking the results 
+from our program with the results of the built in commands it was determined what we needed to change 
+to ensure clear and accurate results.

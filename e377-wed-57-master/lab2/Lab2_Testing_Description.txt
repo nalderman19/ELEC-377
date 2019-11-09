@@ -1,0 +1,15 @@
+Lab 2 Testing
+Nicholas Alderman - 16NAA5
+Daniyal Maniar - 16MDM13
+
+The debugging process for lab 2 was similar to that of lab 1. We used regular debugging 
+methods and one central method to determine the accuracy and precision of the program. 
+The linux 'ps -A' command was used to look at the list of processes and the locations in memory.
+To ensure accurate and clear testing, the command was used with user inputs: 'ps -Ao pid,uid,nice'.
+This left out information that was not needed; executing the command this way provided a better 
+idea of what our program should look like and how much information would be needed.
+
+To run the our process, first the make command is used to compile the code based on the make file. 
+Then we use the root user and used the command 'insmod' with the compiled object file. We then 
+used the 'cat' command to see the contents located in /proc/lab2. The output of our program can 
+be found in the 'lab2Output.txt' file on the gitlab directory.

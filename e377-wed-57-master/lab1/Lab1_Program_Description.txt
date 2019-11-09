@@ -1,0 +1,12 @@
+Nicholas Alderman - 16NAA5
+Daniyal Maniar - 16MDM13
+
+DESCRIPTION OF PROGRAM
+The program that was designed in Lab 1 has two objectives. Firstly, to re-familiarize students with C programming and Linux basics. Secondly, the
+main objective of the program is to list the current running processes using '/proc' interface.
+
+The way this is done is by first getting the number of files in the '/proc' directory and storing the process dirents in the
+'nameList' variable. The program also inserts a callback function that returns true if the process name only contains numbers. The program the
+loops through each process in the folder and generates a file name string. The program then iterates through each line of the an individual file 
+and locates lines that are needed (i.e. Name, State, Pid, Uid, and Gid). Each piece of information is held in a buffer "string" that is 
+printed at the end of the program.

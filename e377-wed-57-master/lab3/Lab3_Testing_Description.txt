@@ -1,0 +1,30 @@
+Lab 3 Testing
+Nicholas Alderman - 16NAA5
+Daniyal Maniar - 16MDM13
+
+Very similar debugging techniques were used for lab 3 to that of labs 1 and 2. However, the
+testing procedure was different. The memory was first initialized to zero by running this command:
+
+	>./meminit
+
+We then ran this line to create a producer with a small test file:
+
+	./producer 0 < test0input.txt
+
+Then, a new terminal window was created and we ran this line to create a consumer to pop out the buffer:
+
+	./consumer 1 > initialTestOutput.txt
+
+Based on the output of the consumer, we could determine whether something was wrong with the
+code and adjust it as we needed. The first test's output can be seen in  'initialTestOutput.txt'. Our next test was conducted to see how the mutex handled two 
+producers and one consumer. Each file contained unique text and the consumer output can be 
+seen in 'twoConsumersOutput.txt'. To do this, the following commands were run:
+
+	./producer 0 < test0input.txt
+	./producer 1 < test1input.txt
+
+Once the producers were created, a consumer was created
+
+	./consumer 0 > twoConsumersOutput.txt
+
+We saw that the output was generated in the order that the producers were ran.
