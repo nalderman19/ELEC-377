@@ -1,0 +1,17 @@
+Main Files:
+/home/student/E377-Wed-57/lab0/lab0user.c:1,1
+/home/student/E377-Wed-57/lab1/lab1.c:3,0
+/home/student/E377-Wed-57/lab3/consumer.c:2,2
+/home/student/E377-Wed-57/lab3/meminit.c:3,0
+/home/student/E377-Wed-57/lab3/producer.c:2,2
+/home/student/E377-Wed-57/lab5/client.c:0,8
+/home/student/E377-Wed-57/lab5/selfcomp.c:0,0
+
+Module Files:
+/home/student/E377-Wed-57/lab0/lab0mod.c:60,63,83
+/home/student/E377-Wed-57/lab2/lab2.c:65
+
+Other Files:
+/home/student/E377-Wed-57/foo.c
+/home/student/E377-Wed-57/lab3/common.c
+

@@ -1,0 +1,30 @@
+Lab 5 Testing Description
+
+During development for the lab there were two main testing stages: one for
+selfcomp.c and one for client.c
+
+In order to ensure selfcomp.c worked as intened, it was used to access
+itself and align "WXYZ" character to test the return address. The main 
+benefit from this was to very the number of 'x' characters in the compromise1
+array. This was done by executing the following commands:
+
+	1 - gdb selfcomp core
+	2 - info registers
+
+This allowed us to to see the contents of the program counter (eip). To
+test the return address. We modified the exploit code provided as needed.
+We used translated the exploit from assembly to machine code.
+We then appended the correct amount of 'nop' instructions, and adjusted 
+for the return address. This printed the /etc/passwd/ contents to
+the console, when the scripts were ran.
+
+Testing the client.c used a server running on the same system to imitate
+using the exploit. This worked and printed the correct output. The client.c
+'compromise' string had to be updated with the correct number of 'nop'
+instructions. The same method was used for the client.c as was used for
+selfcomp.c.
+
+For further testing, the 'server' and 'client' were run simultaniously with
+the same port number. The program worked as expected - client returned
+/etc/passwd/ and the server crashed with a segmentation fault. The outputs
+can be see in 'selfcompOutput.txt' and 'clientOutput.txt'.

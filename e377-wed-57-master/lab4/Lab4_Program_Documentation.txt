@@ -1,0 +1,32 @@
+Lab 4 Program Documentation
+Nicholas Alderman - 16naa5
+Daniyal Maniar - 16mdm13
+
+PART 1
+The part 1 script includes a formatted line by line output of all the
+processes and their associated properties. It does this by first printing 
+the column headers using the 'echo' command. It then loops through each file 
+in the 'proc' directory that only consists of digits and works with folders 
+only with integers in the name. This is done elegantly by using a parameterized 
+'ls' command. It then checks to see if a 'status' file exists in a given directory
+by using an if statement. From this point forward, the information needed is 
+extracted by file contents name to get the RSS, and  PID. The 'stat' command
+is also used to get info on the USER, a series of 'grep' and 'sed' commands are 
+used to get the desired output (ie. removing end of line, 'VmRSS:', and 'kB').
+Finally, the command is obtained through extracting it from the 'cmdline' file 
+and processing it. In each iteration of the loop, the obtained values are echoed.
+
+PART 2
+The end result of the part 2 script is a formatted output to the console. 
+Empty strings for each type of source file are initialized (one for files 
+with a main, one for module files, one for other files). A for loop is 
+used to find and iterate through files with the extention '.c'. At this 
+point, an if statement is used to determine the 'type' of source file. 
+The 'main' files are processed first and the string is created with the 
+path followed by the number of 'printf' and 'fprintf' occurences are appended 
+to the end of the string. Similarly, for 'module' files, they are processed
+by appending the line numbers where 'printk' occurs to the path string. 
+Finally, the paths for 'other' files are added to its respective string.  
+Fallback prcedures are implemented to ensure that if there are no files of 
+a type the script outputs "No Files" of the respective type. The strings are 
+then formatted and output into an 'echo' command at the end of the script. 
